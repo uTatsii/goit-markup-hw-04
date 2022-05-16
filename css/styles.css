@@ -465,22 +465,9 @@ img {
   background-color: var(--web-logo-color);
 }
 
-/* 
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  fill: var(--icons);
+.footer-social-link:not(:last-child) {
+  margin-right: 10px;
 }
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--web-logo-color);
-  border-radius: 50%;
-  fill: var(--main-white);
-} */
 
 /*  Filter  */
 
@@ -518,6 +505,9 @@ img {
 .filter-btn:focus {
   color: var(--main-white);
   background-color: var(--web-logo-color);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*  Projects  */
@@ -533,6 +523,13 @@ img {
 
 .projects-item:not(.projects-item:nth-child(3n + 3)) {
   margin-right: 30px;
+}
+
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .projects-item:not(.projects-item:nth-last-child(-n + 3)) {
