@@ -9,6 +9,14 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --btn-hover: #188ce8;
   --icons: #afb1b8;
+  --border-header-color: #ececec;
+  --hero-gradient: rgba(47, 48, 58, 0.4);
+  --black-shadow-06: rgba(0, 0, 0, 0.06);
+  --black-shadow-08: rgba(0, 0, 0, 0.08);
+  --black-shadow-10: rgba(0, 0, 0, 0.1);
+  --black-shadow-12: rgba(0, 0, 0, 0.12);
+  --black-shadow-16: rgba(0, 0, 0, 0.16);
+  --projects-border: #eeeeee;
 }
 
 html {
@@ -85,7 +93,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header-color);
 }
 
 .logo,
@@ -104,20 +112,10 @@ img {
 }
 
 .logo {
-  margin-right: 93px;
-  color: var(--header-logo-color);
-}
-
-/*  Ideal padding for container
-  .logo {
-  padding-top: 28.378px;
-  padding-bottom: 28.378px;
-}
-*/
-
-.logo {
   padding-top: 24px;
   padding-bottom: 24px;
+  margin-right: 93px;
+  color: var(--header-logo-color);
 }
 
 .logo-web {
@@ -134,8 +132,8 @@ img {
 
 .nav-link {
   display: inline-block;
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--main-text-color);
 }
 
@@ -179,16 +177,14 @@ img {
 /*  Hero  */
 
 .hero {
-  background-image: url(../images/hero/background-hero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   max-width: 1600px;
-}
-
-.hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(to right, var(--hero-gradient) , var(--hero-gradient)), url(../images/hero/background-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -250,9 +246,6 @@ img {
   border-radius: 4px;
   margin-bottom: 30px;
 }
-
-/* .benefits-icon {
-} */
 
 .benefits-item-title {
   font-size: inherit;
@@ -328,7 +321,7 @@ img {
   margin-bottom: 16px;
 }
 
-.team-social-links {
+.team-social-list {
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -359,9 +352,14 @@ img {
 .clients-list {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.clients-item {
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,12 +370,8 @@ img {
   fill: var(--icons);
 }
 
-.clients-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
   fill: var(--web-logo-color);
   border-color: var(--web-logo-color);
 }
@@ -442,10 +436,14 @@ img {
   color: var(--main-white);
 }
 
-.footer-social-links {
+.footer-social-list {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer-social-link {
@@ -462,10 +460,6 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--web-logo-color);
-}
-
-.footer-social-link:not(:last-child) {
-  margin-right: 10px;
 }
 
 /*  Filter  */
@@ -504,9 +498,9 @@ img {
 .filter-btn:focus {
   color: var(--main-white);
   background-color: var(--web-logo-color);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px 0 var(--black-shadow-12);
+  box-shadow: 0 1px 2px 0 var(--black-shadow-08);
+  box-shadow: 0 3px 1px 0 var(--black-shadow-10);
 }
 
 /*  Projects  */
@@ -516,23 +510,24 @@ img {
   flex-wrap: wrap;
 }
 
-.projects-item {
-  width: 370px;
-}
-
 .projects-item:not(.projects-item:nth-child(3n + 3)) {
   margin-right: 30px;
 }
 
-.projects-item:hover,
-.projects-item:focus {
-  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-}
-
 .projects-item:not(.projects-item:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.projects-link {
+  display: block;
+  width: 370px;
+}
+
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 1px 4px 6px 0 var(--black-shadow-16);
+  box-shadow: 0 4px 4px 0 var(--black-shadow-06);
+  box-shadow: 0 1px 1px 0 var(--black-shadow-12);
 }
 
 .projects-text {
@@ -540,9 +535,9 @@ img {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-right: 1px solid var(--projects-border);
+  border-bottom: 1px solid var(--projects-border);
+  border-left: 1px solid var(--projects-border);
 }
 
 .projects-subtitle {
