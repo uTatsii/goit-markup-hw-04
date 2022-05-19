@@ -28,6 +28,7 @@ body {
   font-size: 14px;
   color: var(--main-text-color);
   background-color: var(--main-white);
+  letter-spacing: 0.03em;
 }
 
 h1,
@@ -73,18 +74,6 @@ img {
   margin-right: auto;
   margin-left: auto;
   width: 1200px;
-}
-
-.logo,
-.logo-footer,
-.benefits-item,
-.benefits-item-title,
-.what-we-do-title,
-.team,
-.contacts-footer,
-.filter-btn,
-.projects-type {
-  letter-spacing: 0.03em;
 }
 
 /*  Header  */
@@ -279,7 +268,11 @@ img {
 
 .what-we-do-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.what-we-do-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /*  Team  */
@@ -293,16 +286,13 @@ img {
   justify-content: space-between;
 }
 
-.team-item {
+.team-info-box {
   background-color: var(--main-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.team-item-photo {
-  margin-bottom: 30px;
 }
 
 .team-item-name,
@@ -435,7 +425,6 @@ img {
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.1428;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-white);
 }
